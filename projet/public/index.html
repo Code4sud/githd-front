@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Rapports Biodiversité et Climat - Paris</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+        <img src="imgs/Logo.png" hfref="home.html" alt="">
+        <p> Obtenez des rapports personnalisés sur une ville spécifique, basés sur des données réelles et à jour. <br/><br/>
+            Accédez à des indicateurs clés tels que la qualité de l'air, la biodiversité, les émissions de CO2 et les impacts climatiques. Sélectionnez simplement le nom d'une ville pour explorer son état environnemental actuel.
+        </p>
+    </header>
+    <main>
+        <h1>Générateur de Rapports Biodiversité et Climat - Paris</h1>
+        <section id="search-section">
+            <input type="text" id="search-input" placeholder="Posez votre question sur la biodiversité à Paris...">
+            <select id="search-scope">
+                <option value="global">Global</option>
+                <option value="arrondissement">Par arrondissement</option>
+            </select>
+            <button id="search-button">Rechercher</button>
+        </section>
+        <section id="results-section">
+            <div id="report-content"></div>
+            <div id="charts-container">
+                <canvas id="tree-species-chart"></canvas>
+                <canvas id="tree-benefits-chart"></canvas>
+            </div>
+            <div id="educational-content">
+                <h2>Pourquoi la Biodiversité est Importante</h2>
+                <p>La biodiversité est essentielle pour la santé de notre planète. Elle soutient les écosystèmes, fournit des services écosystémiques vitaux, et est cruciale pour la survie de nombreuses espèces.</p>
+                <h2>Comment Contribuer</h2>
+                <p>Vous pouvez contribuer à la protection de l'environnement en participant à des initiatives locales, en réduisant votre consommation d'énergie, et en soutenant les organisations environnementales.</p>
+            </div>
+            <div id="map-container">
+                <div id="map" style="height: 400px;"></div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
